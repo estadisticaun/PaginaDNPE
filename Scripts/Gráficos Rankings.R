@@ -217,11 +217,8 @@ USapiens <- Plot.SeriesRev(datos = USapiensDF,
                               titulo = "Evolución posiciones de las sedes de la UNAL en el Ranking U-Sapiens",
                               labelX = "Semestre",
                               labelY = "Puesto en Colombia",
-                              estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
+                              estilo    = list(LegendTitle = "Posiciones sedes UNAL:", hc.Tema = 4, hc.Slider = FALSE,
                                                hc.Credits = "Periodo: 2011-2020"))
-
-
-
 
 # Crear HTML ----
 

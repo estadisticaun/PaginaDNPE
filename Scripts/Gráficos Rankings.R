@@ -6,6 +6,7 @@ library(tidyr)
 library(stringr)
 library(highcharter)
 library(htmlwidgets)
+library(UnalR)
 
 # Función salvar widges ----
 
@@ -63,7 +64,7 @@ QSAreas <- Plot.Series(datos = QSAreasDF,
                categoria = "TOTAL", 
                col = c("#00BB2D"),
                libreria = "highcharter",
-               titulo = "Evolución posiciones de la UNAL en QS World University Rankings by Subject",
+               titulo = " Evolución Número de Áreas Temáticas clasificadas de la UNAL en QS World University Rankings by Subject",
                labelX = "Año",
                labelY = "Número de Áreas Temáticas clasificadas",
                estilo    = list(hc.Tema = 4, hc.Slider = FALSE,

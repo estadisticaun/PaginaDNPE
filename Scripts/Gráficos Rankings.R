@@ -7,6 +7,7 @@ library(stringr)
 library(highcharter)
 library(htmlwidgets)
 library(UnalR)
+library(googledrive)
 
 # Función salvar widges ----
 
@@ -21,7 +22,9 @@ Salvar <- function(objeto, ruta, nombre){
 
 # Importar datos ----
 
-Rankings <- read_excel("Datos/Rankings.xlsx")
+drive_download("Rankings/Rankings.xlsx", overwrite = TRUE)
+Rankings <- read_excel("Rankings.xlsx")
+unlink(c("Rankings.xlsx"))
 
 # VISUALIZACIONES
 
@@ -37,7 +40,7 @@ QSMundo <- Plot.SeriesRev(datos = QSMundoDF,
              labelX = "Año",
              labelY = "Puesto Mundo",
              estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                             hc.Credits = "Periodo: 2011-2020"))
+                             hc.Credits = "Periodo: 2011-2021"))
 
 # QS Latino ----
 
@@ -67,7 +70,7 @@ QSAreas <- Plot.Series(datos = QSAreasDF,
                titulo = " Evolución Número de Áreas Temáticas clasificadas de la UNAL en QS World University Rankings by Subject",
                labelX = "Año",
                labelY = "Número de Áreas Temáticas clasificadas",
-               estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
+               estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
                                 hc.Credits = "Periodo: 2015-2021"))
 
 
@@ -176,7 +179,7 @@ MERCOTalento <- Plot.SeriesRev(datos = MERCOTalentoDF,
                                 labelX = "Año",
                                 labelY = "Puesto en Colombia",
                                 estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                                 hc.Credits = "Periodo: 2011-2020"))
+                                                 hc.Credits = "Periodo: 2011-2021"))
 
 # MERCORGC ----
 
@@ -219,7 +222,7 @@ USapiens <- Plot.SeriesRev(datos = USapiensDF,
                               labelX = "Semestre",
                               labelY = "Puesto en Colombia",
                               estilo    = list(LegendTitle = "Posiciones sedes UNAL:", hc.Tema = 4, hc.Slider = FALSE,
-                                               hc.Credits = "Periodo: 2011-2020"))
+                                               hc.Credits = "Periodo: 2011-2021"))
 
 # Crear HTML ----
 

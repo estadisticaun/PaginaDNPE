@@ -55,7 +55,7 @@ QSLatino <- Plot.SeriesRev(datos = QSLatinoDF,
                labelX = "Año",
                labelY = "Puesto en Latinoamérica",
                estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                hc.Credits = "Periodo: 2011-2020"))
+                                hc.Credits = "Periodo: 2011-2021"))
 
 
 # QS Áreas ----
@@ -70,7 +70,7 @@ QSAreas <- Plot.Series(datos = QSAreasDF,
                titulo = " Evolución Número de Áreas Temáticas clasificadas de la UNAL en QS World University Rankings by Subject",
                labelX = "Año",
                labelY = "Número de Áreas Temáticas clasificadas",
-               estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+               estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                 hc.Credits = "Periodo: 2015-2021"))
 
 
@@ -88,7 +88,7 @@ THEMundo <- Plot.SeriesRev(datos = THEMundoDF,
                labelX = "Año",
                labelY = "Puesto Mundo",
                estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                hc.Credits = "Periodo: 2017-2020"))
+                                hc.Credits = "Periodo: 2017-2021"))
 
 # THE Latino ----
 
@@ -103,7 +103,7 @@ THELatino <- Plot.SeriesRev(datos = THELatinoDF,
                labelX = "Año",
                labelY = "Puesto en Latinoamérica",
                estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                hc.Credits = "Periodo: 2017-2020"))
+                                hc.Credits = "Periodo: 2017-2021"))
 
 # THE Emergentes ----
 
@@ -118,7 +118,7 @@ THEEmergentes <- Plot.SeriesRev(datos = THEEmergentesDF,
                    labelX = "Año",
                    labelY = "Puesto Mundo",
                    estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                hc.Credits = "Periodo: 2018-2021"))
+                                hc.Credits = "Periodo: 2018-2022"))
 
 # ARWUMundo ----
 
@@ -134,7 +134,7 @@ ARWUMundo <- Plot.SeriesRev(datos = ARWUMundoDF,
                                 labelX = "Año",
                                 labelY = "Puesto Mundo",
                                 estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                                 hc.Credits = "Periodo: 2014-2020"))
+                                                 hc.Credits = "Periodo: 2014-2021"))
 
 
 # ARWULatino ----
@@ -150,7 +150,7 @@ ARWULatino <- Plot.SeriesRev(datos = ARWULatinoDF,
                             labelX = "Año",
                             labelY = "Puesto en Latinoamérica",
                             estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                             hc.Credits = "Periodo: 2013-2020"))
+                                             hc.Credits = "Periodo: 2013-2021"))
 
 # MERCOEmpresas ----
 
@@ -164,7 +164,7 @@ MERCOEmpresas <- Plot.SeriesRev(datos = MERCOEmpresasDF,
                              labelX = "Año",
                              labelY = "Puesto en Colombia",
                              estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                              hc.Credits = "Periodo: 2011-2020"))
+                                              hc.Credits = "Periodo: 2011-2021"))
 
 
 # MERCOTalento ----
@@ -208,7 +208,7 @@ MERCOSector <- Plot.SeriesRev(datos = MERCOSectorDF,
                            labelX = "Año",
                            labelY = "Puesto en Colombia",
                            estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                            hc.Credits = "Periodo: 2011-2020"))
+                                            hc.Credits = "Periodo: 2011-2021"))
 
 # USapiens ----
 

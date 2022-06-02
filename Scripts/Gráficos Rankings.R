@@ -40,7 +40,7 @@ QSMundo <- Plot.SeriesRev(datos = QSMundoDF,
              labelX = "Año",
              labelY = "Puesto Mundo",
              estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                             hc.Credits = "Periodo: 2011-2021"))
+                             hc.Credits = "Periodo: 2011-2022"))
 
 # QS Latino ----
 
@@ -71,7 +71,7 @@ QSAreas <- Plot.Series(datos = QSAreasDF,
                labelX = "Año",
                labelY = "Número de Áreas Temáticas clasificadas",
                estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
-                                hc.Credits = "Periodo: 2015-2021"))
+                                hc.Credits = "Periodo: 2015-2022"))
 
 
 
@@ -222,7 +222,7 @@ USapiens <- Plot.SeriesRev(datos = USapiensDF,
                               labelX = "Semestre",
                               labelY = "Puesto en Colombia",
                               estilo    = list(LegendTitle = "Posiciones sedes UNAL:", hc.Tema = 4, hc.Slider = FALSE,
-                                               hc.Credits = "Periodo: 2011-2021"))
+                                               hc.Credits = "Periodo: 2011-2022"))
 
 # Crear HTML ----
 

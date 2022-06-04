@@ -81,6 +81,7 @@ Msj <- paste0("Periodo: 2015-", Uyear)
 QSAreas <- Plot.Series(datos = QSAreasDF, 
                categoria = "TOTAL", 
                col = c("#00BB2D"),
+               ylim = c(0, 40),
                libreria = "highcharter",
                titulo = " Evolución Número de Áreas Temáticas clasificadas de la UNAL en QS World University Rankings by Subject",
                labelX = "Año",

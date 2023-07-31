@@ -39,14 +39,15 @@ QSMundo <- Plot.Series(
   datos     = QSMundoDF,
   categoria = "TOTAL", 
   invertir = TRUE,
-  col = c("#00BB2D"),
-  ylim = c(0, 500),
-  libreria = "highcharter",
+  colores = c("#00BB2D"),
+  #ylim = c(0, 500),
   titulo = "Evolución posiciones de la UNAL en QS World University Rankings",
   labelX = "Año",
   labelY = "Puesto Mundo",
-  estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+  libreria = "highcharter",
+  estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                    hc.Credits = Msj))
+QSMundo
 
 # QS Latino ----
 
@@ -61,14 +62,14 @@ QSLatino <- Plot.Series(
   categoria = "TOTAL", 
   invertir = TRUE,
   col = c("#00BB2D"),
-  ylim = c(0, 15),
+  #ylim = c(0, 15),
   libreria = "highcharter",
   titulo = "Evolución posiciones de la UNAL en QS Latin America University Rankings",
   labelX = "Año",
   labelY = "Puesto en Latinoamérica",
-  estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+  estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                    hc.Credits = Msj))
-
+QSLatino
 
 # QS Áreas ----
 
@@ -81,14 +82,14 @@ Msj <- paste0("Periodo: 2015-", Uyear)
 QSAreas <- Plot.Series(datos = QSAreasDF, 
                categoria = "TOTAL", 
                col = c("#00BB2D"),
-               ylim = c(0, 40),
+               #ylim = c(0, 40),
                libreria = "highcharter",
                titulo = " Evolución Número de Áreas Temáticas clasificadas de la UNAL en QS World University Rankings by Subject",
                labelX = "Año",
                labelY = "Número de Áreas Temáticas clasificadas",
-               estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+               estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                 hc.Credits = Msj))
-
+QSAreas
 
 
 # THE Mundo ----
@@ -102,14 +103,15 @@ THEMundo <- Plot.Series(datos = THEMundoDF,
                categoria = "TOTAL", 
                invertir = TRUE,
                col = c("#00BB2D"),
-               ylim = c(0, 1200),
+               #ylim = c(0, 1200),
                libreria = "highcharter",
                titulo = "Evolución posiciones de la UNAL en Times Higher Education (THE)
                          World University Rankings",
                labelX = "Año",
                labelY = "Puesto Mundo",
-               estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+               estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                 hc.Credits = Msj))
+THEMundo
 
 # THE Latino ----
 
@@ -122,14 +124,16 @@ THELatino <- Plot.Series(datos = THELatinoDF,
                categoria = "TOTAL", 
                invertir = TRUE,
                col = c("#00BB2D"),
-               ylim = c(0, 50),
+               #ylim = c(0, 50),
                libreria = "highcharter",
                titulo = "Evolución posiciones de la UNAL en Times Higher Education (THE)
                          Latin America University Rankings",
                labelX = "Año",
                labelY = "Puesto en Latinoamérica",
-               estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+               estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                 hc.Credits = Msj))
+
+THELatino
 
 # THE Emergentes ----
 
@@ -143,14 +147,15 @@ THEEmergentes <- Plot.Series(datos = THEEmergentesDF,
                    categoria = "TOTAL", 
                    invertir = TRUE,
                    col = c("#00BB2D"),
-                   ylim = c(0, 400),
+                   #ylim = c(0, 400),
                    libreria = "highcharter",
                    titulo = "Evolución posiciones de la UNAL en Times Higher Education (THE)
                          Emerging Economies Rankings",
                    labelX = "Año",
                    labelY = "Puesto Mundo",
-                   estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+                   estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                 hc.Credits = Msj))
+THEEmergentes
 
 # ARWUMundo ----
 
@@ -164,15 +169,15 @@ ARWUMundo <- Plot.Series(datos = ARWUMundoDF,
                                 categoria = "TOTAL", 
                                 invertir = TRUE,
                                 col = c("#00BB2D"),
-                                ylim = c(0, 1000),
+                                #ylim = c(0, 1000),
                                 libreria = "highcharter",
                                 titulo = "Evolución posiciones de la UNAL en Academic Ranking of World Universities
                                           ARWU - Shanghai",
                                 labelX = "Año",
                                 labelY = "Puesto Mundo",
-                                estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+                                estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                                  hc.Credits = Msj))
-
+ARWUMundo
 
 # ARWULatino ----
 
@@ -190,8 +195,9 @@ ARWULatino <- Plot.Series(datos = ARWULatinoDF,
                                       ARWU - Shanghai",
                             labelX = "Año",
                             labelY = "Puesto en Latinoamérica",
-                            estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+                            estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                              hc.Credits = Msj))
+ARWULatino
 
 # MERCOEmpresas ----
 
@@ -204,14 +210,14 @@ MERCOEmpresas <- Plot.Series(datos = MERCOEmpresasDF,
                              categoria = "TOTAL",
                              invertir = TRUE,
                              col = c("#00BB2D"),
-                             ylim = c(0, 70),
+                             #ylim = c(0, 70),
                              libreria = "highcharter",
                              titulo = "Evolución posiciones de la UNAL en MERCO EMPRESAS",
                              labelX = "Año",
                              labelY = "Puesto en Colombia",
-                             estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+                             estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                               hc.Credits = Msj))
-
+MERCOEmpresas
 
 # MERCOTalento ----
 
@@ -224,13 +230,14 @@ MERCOTalento <- Plot.Series(datos = MERCOTalentoDF,
                                 categoria = "TOTAL", 
                                 col = c("#00BB2D"),
                                 invertir = TRUE,
-                                ylim = c(0, 30),
+                                #ylim = c(0, 30),
                                 libreria = "highcharter",
                                 titulo = "Evolución posiciones de la UNAL en MERCO TALENTO",
                                 labelX = "Año",
                                 labelY = "Puesto en Colombia",
-                                estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+                                estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                                  hc.Credits = Msj))
+MERCOTalento
 
 # MERCORGC ----
 
@@ -247,9 +254,10 @@ MERCORGC <- Plot.Series(datos = MERCORGCDF,
                                titulo = "Evolución posiciones de la UNAL en MERCO Responsabilidad y Gobierno Corporativo",
                                labelX = "Año",
                                labelY = "Puesto en Colombia",
-                               estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+                               estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                                 hc.Credits = Msj))
 
+MERCORGC
 
 # MERCOSector ----
 
@@ -262,13 +270,14 @@ MERCOSector <- Plot.Series(datos = MERCOSectorDF,
                            categoria = "TOTAL", 
                            col = c("#00BB2D"),
                            invertir = TRUE,
-                           ylim = c(0, 10),
+                           #ylim = c(0, 10),
                            libreria = "highcharter",
                            titulo = "Evolución posiciones de la UNAL en MERCO Sector Educación Superior",
                            labelX = "Año",
                            labelY = "Puesto en Colombia",
-                           estilo    = list(hc.Tema = 1, hc.Slider = FALSE,
+                           estilo    = list(hc.Tema = 4, hc.Slider = FALSE,
                                             hc.Credits = Msj))
+MERCOSector
 
 # USapiens ----
 
@@ -285,8 +294,9 @@ USapiens <- Plot.Series(datos = USapiensDF,
                               titulo = "Evolución posiciones de las sedes de la UNAL en el Ranking U-Sapiens",
                               labelX = "Semestre",
                               labelY = "Puesto en Colombia",
-                              estilo    = list(LegendTitle = "Posiciones sedes UNAL:", hc.Tema = 1, hc.Slider = FALSE,
+                              estilo    = list(LegendTitle = "Posiciones sedes UNAL:", hc.Tema = 4, hc.Slider = FALSE,
                                                hc.Credits = Msj))
+USapiens
 
 # Crear HTML ----
 

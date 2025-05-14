@@ -103,7 +103,7 @@ THEMundo <- Plot.Series(datos = THEMundoDF,
                categoria = "TOTAL", 
                invertir = TRUE,
                col = c("#00BB2D"),
-               ylim = c(0, 1400),
+               ylim = c(0, 2000),
                libreria = "highcharter",
                titulo = "Evolución posiciones de la UNAL en Times Higher Education (THE)
                          World University Rankings",

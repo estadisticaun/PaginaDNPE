@@ -389,3 +389,115 @@ Ind3 <- scales::percent(nrow(Cruce_m222_m232)/nrow(Matri_20222_Final),
 # Resultado del indicador 3
 
 print(Ind3)
+
+
+### Indicadores 2025 ----
+
+##%######################################################%##
+#                                                          #
+####         Indicador 1: Tasa de graduación            ####
+#                                                          #
+##%######################################################%##
+
+# Cohorte 2018-1
+
+MatriPV_20181 <- UnalData::Matriculados %>% 
+  filter(TIPO_NIVEL == "Pregrado", MAT_PVEZ == "Sí", 
+         YEAR == 2018, SEMESTRE == 1)
+
+# Graduados en pregrado 2023
+
+Gra_2023 <- UnalData::Graduados %>% 
+  filter(TIPO_NIVEL == "Pregrado", YEAR %in% c(2023))
+
+
+# Cruce Cohorte 1
+
+Cohorte1 <- inner_join(MatriPV_20181, Gra_2023, by = "ID")
+
+#
+# Cohorte 2019-1
+#
+
+MatriPV_20191 <- UnalData::Matriculados %>% 
+  filter(TIPO_NIVEL == "Pregrado", MAT_PVEZ == "Sí", 
+         YEAR == 2019, SEMESTRE == 1)
+
+# Graduados en pregrado 2024
+
+Gra_2024 <- UnalData::Graduados %>% 
+  filter(TIPO_NIVEL == "Pregrado", YEAR %in% c(2024))
+
+
+# Cruce Cohorte 2
+
+Cohorte2 <- inner_join(MatriPV_20191, Gra_2024, by = "ID")
+
+# Ind1
+
+Ind1 <- (nrow(Cohorte1) + nrow(Cohorte2))/(nrow(MatriPV_20181) + nrow(MatriPV_20191))
+Ind1 <- paste0(round(Ind1*100, 2), "%")
+
+# Resultado del indicador 1
+
+print(Ind1)
+
+
+##%######################################################%##
+#                                                          #
+####         Indicador 2: tasa de continuación          ####
+#                                                          #
+##%######################################################%##
+
+Grad_21_25_pre <- UnalData::Graduados %>% 
+  filter(TIPO_NIVEL == "Pregrado", YEAR %in% c(2021:2025))
+
+Post_21_25 <- UnalData::Matriculados %>% 
+  filter(TIPO_NIVEL == "Postgrado", YEAR >= 2021) %>% 
+  select(c(ID, NIVEL)) %>% distinct()
+
+Cruce_gra_pre <- inner_join(Grad_21_25_pre, Post_21_25, by = "ID")
+
+Ind2 <- paste0(round((nrow(Cruce_gra_pre)/nrow(Grad_21_25_pre))*100, 2), "%")
+
+# Resultado del indicador 2
+
+print(Ind2)
+
+
+###%######################################################%##
+#                                                          #
+####         Indicador 3: Tasa de retención             ####
+#                                                          #
+##%######################################################%##
+
+# Matriculados en pregrado 2024-1
+
+Matri_20241 <- UnalData::Matriculados %>% 
+  filter(TIPO_NIVEL == "Pregrado", YEAR == 2024, SEMESTRE == 1)
+
+# Graduados en pregrado 2024-2 y 2025-1
+
+Gra_242_251 <- UnalData::Graduados %>% 
+  filter(TIPO_NIVEL == "Pregrado" & ((YEAR == 2024 & SEMESTRE == 2)|(YEAR == 2025 & SEMESTRE == 1)))
+
+# Matriculados en pregrado 20241 menos graduados 20242 y 20251
+
+Matri_20241_Final <- anti_join(Matri_20241, Gra_242_251, by = "ID")
+
+# Matriculados en pregrado 2025-1
+
+Matri_20251 <- UnalData::Matriculados %>% 
+  filter(TIPO_NIVEL == "Pregrado", YEAR == 2025, SEMESTRE == 1)
+
+# Cruzar bases de datos
+
+Cruce_m241_m251 <- inner_join(Matri_20241_Final, Matri_20251, by = "ID")
+
+# Calcular indicador 3
+
+Ind3 <- paste0(round((nrow(Cruce_m241_m251)/nrow(Matri_20241_Final))*100, 2), "%")
+
+# Resultado del indicador 2
+
+print(Ind3)
